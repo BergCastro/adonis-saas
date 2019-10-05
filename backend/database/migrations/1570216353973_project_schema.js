@@ -12,9 +12,9 @@ class ProjectSchema extends Schema {
       table
         .integer('team_id')
         .unsigned()
-        .notNullable('teams')
+        .notNullable()
         .references('id')
-        .inTable()
+        .inTable('teams')
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
     })
